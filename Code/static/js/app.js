@@ -55,7 +55,27 @@ function buildMetadata(sample) {
 
 // -----------
 //Bubble Chart 
-// -----------
+// // -----------
+var LayoutBubble = {
+    margin: { t: 50 },
+    xaxis: { title: "OTU ID" },
+    hovermode: "closest",
+    };
+
+    var DataBubble = [ 
+    {
+      x: ids,
+      y: values,
+      text: labels,
+      mode: "markers",
+      marker: {
+        color: ids,
+        size: values,
+        }
+    }
+  ];
+
+  Plotly.newPlot("bubble", DataBubble, LayoutBubble);
 
 //   --------
  //Bar Chart
